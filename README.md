@@ -16,16 +16,19 @@ After testing of our code, we uploaded it in this repository, which is a copy of
 ### 1. [FPGA_testing](/FPGA_testing)
 Folder contains the code written in Verilog for functionality testing with the FPGA. Also, contains a Pin Assignment file used for the process, along with the addon used. 
 
-### 2. [src](/src)
+### 2. [Schematic](/Schematic)
+Folder contains the internal schematic of the IC 741LS181
+
+### 3. [src](/src)
 Folder contains the Verilog file used for Tiny Tapeout's Integration
 
-### 3. [info.yaml](info.yaml)
+### 4. [info.yaml](info.yaml)
 File contains information about the project
 
-### 4. [info.md](info.md)
+### 5. [info.md](/docs/info.md)
 File contains information about the project in Markdown format
 
-### 5. [test](/test)
+### 6. [test](/test)
 Folder containing testbench files used by Tiny Tapeout
 
 
