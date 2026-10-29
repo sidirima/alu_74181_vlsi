@@ -15,3 +15,6 @@ jobs:
 
       - name: Build docs
         uses: TinyTapeout/tt-gds-action/docs@tt07
+
+      - name: Setup Typst
+        uses: typst-community/setup-typst@v3
