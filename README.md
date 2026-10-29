@@ -103,7 +103,3 @@ To learn more and get started, visit the [website](https://tinytapeout.com).
 4. Adapt the testbench to your design. See [test/README.md](test/README.md) for more information.
 
 The GitHub action will automatically build the ASIC files using [OpenLane](https://www.zerotoasiccourse.com/terminology/openlane/).
-
-## Enable GitHub actions to build the results page
-
-- [Enabling GitHub Pages](https://tinytapeout.com/faq/#my-github-action-is-failing-on-the-pages-part)
