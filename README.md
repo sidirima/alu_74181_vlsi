@@ -65,6 +65,15 @@ In the picture below we can see the table of functions that can be performed by 
   <img width="746" height="431" alt="image" src="https://github.com/user-attachments/assets/3173d0bc-d2a9-42dc-b536-97959105fdb2" />
 </p>
 
+### Why Verilog and not VHDL?
+The reason for using Verilog instead of VHDL for this particular project is double. First, I wanted to experiment with the syntax differences between VHDL and Verilog and most significantly because Tiny Tapeout tools that will be used for visualization of the designed IC requires Verilog logic coding input. Syntax-wise, Verilog is a language that mostly resembles the C programming language, opposing VHDL that its syntax resembles older programming languages like Pascal.
+
+As we can see in the image below, Verilog is becoming more and more popular in countries where advances in digital technology come rapidly, like India and United States, opposing to European countries that VHDL is still dominant in the market.
+
+<p align = "center">
+  <img width="748" height="535" alt="image" src="https://github.com/user-attachments/assets/b75891e8-c6c3-41c0-a250-044e31e6ac7f" />
+</p>
+
 ## What is Tiny Tapeout?
 
 Tiny Tapeout is an educational project that aims to make it easier and cheaper than ever to get your digital designs manufactured on a real chip.
