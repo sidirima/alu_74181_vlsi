@@ -21,14 +21,19 @@ module tt_um_74181 (
     wire X,Y,CN4b,AEB;
 
     //Assigning the input A and B pins
-    assign uio_out = 8'b0;
-    assign {A,B} = ui_in;
-    assign {S,CNb,M} = uio_out; // Setting bidirectional bits as inputs
-    assign uio_out[1:0] = 2'b0;
-    assign uio_oe = 8'b0; // Output enable = 0
+    // 1. Δεδομένα A και B από τα dedicated inputs
+    assign {A, B} = ui_in;
 
-    
-    assign uo_out = {F,AEB,X,Y,CN4b}; // Example: ou_out is the sum of ui_in and uio_in
+    // 2. Ρύθμιση uio ως καθαρές είσοδοι
+    assign uio_oe = 8'b0;      // Όλα τα uio είναι είσοδοι (0)
+    assign uio_out = 8'b0;     // Αφού είναι είσοδοι, δεν βγάζουμε τίποτα προς τα έξω
+
+    // 3. Διάβασμα των σημάτων ελέγχου από το uio_in (και όχι το uio_out!)
+    assign {S, CNb, M} = uio_in[5:0]; 
+
+    // 4. Σύνδεση εξόδων στο uo_out
+    assign uo_out = {F, AEB, X, Y, CN4b};
+
 
     wire [3:0] E, D, C, Bb; // Assign temporary modules
     Emodule Emod1 (A, B, S, E);
