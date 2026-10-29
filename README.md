@@ -8,7 +8,7 @@ In the first part of the project, we studied the schematic of the IC provided by
 Using the schematic and also the function table provided, we were able to recompile the whole IC on Verilog code. To test the functionality of this code, we used an FPGA, specifically the Spartan II family XC2S100-PQ208, programmable using Xilinx ISE v10.1 (legacy product).
 After testing of our code, we uploaded it in this repository, which is a copy of Tiny Tapeout's [/tt07-verilog-template](https://github.com/TinyTapeout/tt07-verilog-template/tree/main). Using the Actions written in Python, we ended up having a 3D multilayer visual representation of the designed IC in VLSI (Very Large Scale Integration). This design would be used in TT07.
 <p align = "center">
-  <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/51b4ec09-404f-4c69-b929-0a1d510a7f96" />
+  <img width="1646" height="765" alt="image" src="https://github.com/user-attachments/assets/e9860be0-dba4-4fba-aaa9-048785866c5b" />
 </p>
 
 ## Project Index
