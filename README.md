@@ -31,6 +31,8 @@ File contains information about the project in Markdown format
 ### 6. [test](/test)
 Folder containing testbench files used by Tiny Tapeout
 
+### 7. [3D view of the silicon wafer](https://sidirima.github.io/alu_74181_vlsi/)
+
 ## What is an Arithmetic Logic Unit?
 An Arithmetic Logic Unit (ALU) is the calculator that performs all the arithmetic and logic functions inside a computer. The basic artithmetic functions it can perform are the following:
 - Addition / Subtraction (with or without carry)
