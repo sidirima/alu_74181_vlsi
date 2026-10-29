@@ -58,14 +58,14 @@ In March 1970, Texas Instruments made an effort to generate the first 4-bit ALU,
   <img width="613" height="646" alt="image" src="https://github.com/user-attachments/assets/1aa440fe-eb24-4cca-ac3a-5f82deca309b" />  
 </p>
 
-#### Function Table
+### Function Table
 In the picture below we can see the table of functions that can be performed by the 74181 IC. This table concerns Active - HIGH Data. Selection is performed with the use of a **4bit input S**(S3 ~ S0) and with the **1bit M input** we can select a different set of operations, when M is HIGH we select Logic Functions and when M is LOW we select Arithmetic Functions. There is also an option of a set of functions to be performed with carry or with no carry by altering the value of the **1bit input Cn**. **Inputs A and B** are 4bit inputs (A0 ~ A3, B0 ~ B3).
 
 <p align = "center">
   <img width="746" height="431" alt="image" src="https://github.com/user-attachments/assets/3173d0bc-d2a9-42dc-b536-97959105fdb2" />
 </p>
 
-### Why Verilog and not VHDL?
+## Why Verilog and not VHDL?
 The reason for using Verilog instead of VHDL for this particular project is double. First, I wanted to experiment with the syntax differences between VHDL and Verilog and most significantly because Tiny Tapeout tools that will be used for visualization of the designed IC requires Verilog logic coding input. Syntax-wise, Verilog is a language that mostly resembles the C programming language, opposing VHDL that its syntax resembles older programming languages like Pascal.
 
 As we can see in the image below, Verilog is becoming more and more popular in countries where advances in digital technology come rapidly, like India and United States, opposing to European countries that VHDL is still dominant in the market.
