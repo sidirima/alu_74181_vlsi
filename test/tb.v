@@ -23,23 +23,21 @@ module tb ();
   wire [7:0] uio_out;
   wire [7:0] uio_oe;
 
-  // Replace tt_um_example with your module name:
-  tt_um_74181  uut (
-     .ui_in  (ui_in),
-        .uo_out (uo_out),
-        .uio_in (uio_in),
-        .uio_out(uio_out),
-        .uio_oe (uio_oe),
-        .ena    (ena),
-        .clk    (clk),
-        .rst_n  (rst_n)
-
-      // Include power ports for the Gate Level test:
+  // Instantiate the Unit Under Test (UUT)
+  tt_um_74181 uut (
+      .ui_in  (ui_in),
+      .uo_out (uo_out),
+      .uio_in (uio_in),
+      .uio_out(uio_out),
+      .uio_oe (uio_oe),
+      .ena    (ena),
+      .clk    (clk),
+      .rst_n  (rst_n)
 `ifdef GL_TEST
       ,
-     .VPWR(VPWR),
-     .VGND(VGND),
+      .VPWR(1'b1),
+      .VGND(1'b0)
 `endif
-   );
+  );
 
 endmodule
