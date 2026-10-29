@@ -59,7 +59,7 @@ In March 1970, Texas Instruments made an effort to generate the first 4-bit ALU,
 </p>
 
 #### Function Table
-In the picture below we can see the table of functions that can be performed by the 74181 IC. This table concerns Active - HIGH Data. Selection is performed with the use of a **4bit input S**(S3 ~ S0) and with the **1bit M input** we can select a different set of operations, when M is HIGH we select Logic Functions and when M is LOW we select Arithmetic Functions. There is also an option of a set of functions to be performed with carry or with no carry by altering the value of the **1bit input Cn**.
+In the picture below we can see the table of functions that can be performed by the 74181 IC. This table concerns Active - HIGH Data. Selection is performed with the use of a **4bit input S**(S3 ~ S0) and with the **1bit M input** we can select a different set of operations, when M is HIGH we select Logic Functions and when M is LOW we select Arithmetic Functions. There is also an option of a set of functions to be performed with carry or with no carry by altering the value of the **1bit input Cn**. **Inputs A and B** are 4bit inputs (A0 ~ A3, B0 ~ B3).
 
 <p align = "center">
   <img width="746" height="431" alt="image" src="https://github.com/user-attachments/assets/3173d0bc-d2a9-42dc-b536-97959105fdb2" />
@@ -72,6 +72,19 @@ As we can see in the image below, Verilog is becoming more and more popular in c
 
 <p align = "center">
   <img width="748" height="535" alt="image" src="https://github.com/user-attachments/assets/b75891e8-c6c3-41c0-a250-044e31e6ac7f" />
+</p>
+
+## FPGA and RTL Design
+The FPGA used is a legacy chip of Xilinx Spartan II family, the XC2S100-PQ208. The development board used was the Spartan-II LC Demo Board from Memec Design. In order for this board to be programmed, we need to use Xilinx ISE Suite (v10.1) that was supported up to Windows 7. The software will run on Windows 10, but the driver for the FPGA programmer is not supported in x64 operating systems. The specific board used, shown in the picture below, does not offer many dip-switches and LEDs for inputs and outputs. Therefore, we need to use an addition board that we made in hand from earlier designs.
+
+<p align = "center">
+  <img width="999" height="756" alt="image" src="https://github.com/user-attachments/assets/97cdcce1-2524-4134-854e-62dff10c47a3" />
+</p>
+
+The RTL schematic that we derive from the Verilog code (from Xilinx ISE) is shown in the picture below. As we can see, there are 3 4-bit inputs (A, B, S), a carry input (CN) and the mode input (M). The outputs are the 4bit F for Result and the 1bit equality flag A=B output (AEB), the carry output flag (CN4) and flags for carry Generate (G) and carry Propagate (P). The symbol is shown in the picture below.
+
+<p align = "center">
+  <img width="599" height="503" alt="image" src="https://github.com/user-attachments/assets/23fd91c9-42f8-4712-880f-b138658f2a51" />
 </p>
 
 ## What is Tiny Tapeout?
