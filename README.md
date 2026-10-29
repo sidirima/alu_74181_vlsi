@@ -31,6 +31,32 @@ File contains information about the project in Markdown format
 ### 6. [test](/test)
 Folder containing testbench files used by Tiny Tapeout
 
+## What is an Arithmetic Logic Unit?
+An Arithmetic Logic Unit (ALU) is the calculator that performs all the arithmetic and logic functions inside a computer. The basic artithmetic functions it can perform are the following:
+- Addition / Subtraction (with or without carry)
+- Increment by 1
+- Decrement by 1
+- Two's Complement (subraction of every bit value from 0)
+
+The basic logic functions that can be performed are the following:
+- AND
+- OR
+- XOR
+- One's Complement (reversing every bit value)
+- NOT
+
+We can understand its working principle better by looking the circuit symbol used to define an ALU. That symbol is the one on the picture below.
+<p align = "center">
+  <img width="348" height="239" alt="image" src="https://github.com/user-attachments/assets/85dcd28d-74f8-42b3-b50e-09aa7e356a87" />
+</p> 
+
+The ALU has 2 inputs _A_ and _B_, which are the numbers that need to be processed. The output of the operation performed is given in _Y_. The _Opcode_ input defines the function that is to be performed by the ALU. The _Status_ input and output can be used to flag if there is a carry in the result or the input. 
+
+## The 74LS181 Integrated Circuit
+In March 1970, Texas Instruments made an effort to generate the first 4-bit ALU, an integrated circuit named SN74181, which is the same one as the 74LS181 by Motorola. The IC is capable of performing 32 different operations. As can be seen in the [internal schematic](/Schematic/sn74ls181.jpg) of the IC, it is consisted of 75 simple logic gates (the gates of more than 2 inputs are analyzed in 2 input gates), therefore the IC belongs to **Medium Scale Integration** (MSI) category (ICs with less than 100 gates). The silicon wafer of the IC can be seen in the picture below.
+<p align = "center">
+  <img width="613" height="646" alt="image" src="https://github.com/user-attachments/assets/1aa440fe-eb24-4cca-ac3a-5f82deca309b" />  
+</p>
 
 ## What is Tiny Tapeout?
 
