@@ -77,29 +77,25 @@ As we can see in the image below, Verilog is becoming more and more popular in c
 </p>
 
 ## FPGA and RTL Design
-The FPGA used is a legacy chip of Xilinx Spartan II family, the XC2S100-PQ208. The development board used was the Spartan-II LC Demo Board from Memec Design. In order for this board to be programmed, we need to use Xilinx ISE Suite (v10.1) that was supported up to Windows 7. The software will run on Windows 10, but the driver for the FPGA programmer is not supported in x64 operating systems. The specific board used, shown in the picture below, does not offer many dip-switches and LEDs for inputs and outputs. Therefore, we need to use an addition board that we made in hand from earlier designs.
+The FPGA used is a legacy chip of Xilinx Spartan II family, the XC2S100-PQ208. The development board used was the Spartan-II LC Demo Board from Memec Design. In order for this board to be programmed, we need to use Xilinx ISE Suite (v10.1) that was supported up to Windows 7. The software will run on Windows 10, but the driver for the FPGA programmer is not supported in x64 operating systems. 
 
 <p align = "center">
   <img width="999" height="756" alt="image" src="https://github.com/user-attachments/assets/97cdcce1-2524-4134-854e-62dff10c47a3" />
 </p>
 
-The RTL schematic that we derive from the Verilog code (from Xilinx ISE) is shown in the picture below. As we can see, there are 3 4-bit inputs (A, B, S), a carry input (CN) and the mode input (M). The outputs are the 4bit F for Result and the 1bit equality flag A=B output (AEB), the carry output flag (CN4) and flags for carry Generate (G) and carry Propagate (P). The symbol is shown in the picture below.
+The specific board used, shown in the picture above, does not offer many dip-switches and LEDs for inputs and outputs. Therefore, we need to use an addition board that we made in hand from earlier designs. The add-on board's schematic can be found [here](/FPGA_testing/Spartan_Addon_LED_DIP.png). Due to the design of the addon board using Active - Low LEDs and DIP - Switches, and in order not to dramatically change the nature of the Verilog code, we need to use a top level module that will invert the inputs and outputs. This is the purpose of [74LS181_top.v](/FPGA_testing/74LS181_top.v)
+
+The RTL schematic symbol that we derive using Xilinx ISE is shown in the picture below. As we can see, there are 3 4-bit inputs (A, B, S), a carry input (CN) and the mode input (M). The outputs are the 4bit F for Result and the 1bit equality flag A=B output (AEB), the carry output flag (CN4) and flags for carry Generate (G) and carry Propagate (P). The symbol is shown in the picture below.
 
 <p align = "center">
   <img width="599" height="503" alt="image" src="https://github.com/user-attachments/assets/23fd91c9-42f8-4712-880f-b138658f2a51" />
 </p>
-
+ 
 ## What is Tiny Tapeout?
 
 Tiny Tapeout is an educational project that aims to make it easier and cheaper than ever to get your digital designs manufactured on a real chip.
 
 To learn more and get started, visit the [website](https://tinytapeout.com).
 
-## Set up your Verilog project
-
-1. Add your Verilog files to the `src` folder.
-2. Edit the [info.yaml](info.yaml) and update information about your project, paying special attention to the `source_files` and `top_module` properties. If you are upgrading an existing Tiny Tapeout project, check out our [online info.yaml migration tool](https://tinytapeout.github.io/tt-yaml-upgrade-tool/).
-3. Edit [docs/info.md](docs/info.md) and add a description of your project.
-4. Adapt the testbench to your design. See [test/README.md](test/README.md) for more information.
-
 The GitHub action will automatically build the ASIC files using [OpenLane](https://www.zerotoasiccourse.com/terminology/openlane/).
+
